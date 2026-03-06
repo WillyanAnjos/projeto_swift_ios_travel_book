@@ -1,148 +1,166 @@
-📍 TravelBook – iOS Study Project
+# 📍 TravelBook – iOS Study Project
 
-TravelBook é um aplicativo iOS desenvolvido em Swift com o objetivo de registrar e visualizar lugares visitados em um mapa.
-O projeto demonstra conceitos fundamentais do desenvolvimento iOS, incluindo MapKit, CoreLocation, CoreData e UIKit.
+TravelBook é um aplicativo iOS desenvolvido em **Swift** com o objetivo de registrar e visualizar lugares no mapa.  
+O projeto demonstra conceitos fundamentais do desenvolvimento iOS, como **MapKit, CoreLocation, CoreData e UIKit**.
 
-A aplicação permite que o usuário marque locais no mapa, adicione informações e salve esses dados localmente, criando uma lista persistente de lugares favoritos.
+A aplicação permite que o usuário **marque locais no mapa, adicione informações e salve esses dados localmente**, criando uma lista persistente de lugares favoritos.
 
-Este projeto foi criado como estudo prático para consolidar conceitos essenciais da plataforma iOS e demonstrar habilidades importantes para a posição de iOS Developer.
+Este projeto foi criado como estudo prático para consolidar conhecimentos essenciais da plataforma **iOS** e demonstrar habilidades relevantes para a posição de **iOS Developer**.
 
-🚀 Funcionalidades
-📍 Marcar locais no mapa
+---
+
+## 📱 Preview
+
+<img src="screenshots/f11.png" width="250"/>
+<img src="screenshots/f2.png" width="250"/>
+<img src="screenshots/f3.png" width="250"/>
+
+# 🚀 Funcionalidades
+
+## 📍 Marcar locais no mapa
 
 O usuário pode pressionar o mapa por alguns segundos para selecionar um ponto geográfico.
+
 Após selecionar o local, é possível adicionar:
 
-Nome do lugar
+- Nome do lugar
+- Comentário ou descrição
 
-Comentário ou descrição
+Esse ponto é exibido no mapa através de um **Map Annotation (`MKPointAnnotation`)**.
 
-Esse ponto é exibido no mapa através de um Map Annotation (MKPointAnnotation).
+---
 
-💾 Persistência de dados com CoreData
+## 💾 Persistência de dados com CoreData
 
-Todos os locais adicionados são salvos utilizando CoreData, incluindo:
+Todos os locais adicionados são salvos utilizando **CoreData**, incluindo:
 
-Nome
-
-Descrição
-
-Latitude
-
-Longitude
-
-Identificador único (UUID)
+- Nome
+- Descrição
+- Latitude
+- Longitude
+- Identificador único (`UUID`)
 
 Isso garante que os dados permaneçam salvos mesmo após fechar o aplicativo.
 
-📋 Lista de lugares salvos
+---
 
-A tela principal apresenta uma lista de locais armazenados utilizando UITableView.
+## 📋 Lista de lugares salvos
+
+A tela principal apresenta uma **lista de locais armazenados** utilizando **UITableView**.
 
 O usuário pode:
 
-Visualizar os lugares cadastrados
+- Visualizar os lugares cadastrados
+- Selecionar um lugar para visualizar no mapa
+- Remover lugares da lista
 
-Selecionar um lugar para visualizar no mapa
+---
 
-Remover lugares da lista
-
-🗺️ Visualização no mapa
+## 🗺️ Visualização no mapa
 
 Ao selecionar um local da lista, o aplicativo:
 
-Busca os dados no CoreData
+1. Busca os dados no **CoreData**
+2. Centraliza o mapa na localização salva
+3. Exibe um marcador com nome e descrição
 
-Centraliza o mapa na localização salva
+---
 
-Exibe um marcador com nome e descrição
+## 🧭 Abrir rota no Apple Maps
 
-🧭 Abrir rota no Apple Maps
+Ao tocar no botão de detalhes do marcador, o aplicativo abre o **Apple Maps** com a opção de navegação até o local selecionado.
 
-Ao tocar no botão de detalhes do marcador, o aplicativo abre o Apple Maps com a opção de navegação até o local selecionado.
+---
 
-🧠 Conceitos iOS demonstrados no projeto
+# 🧠 Conceitos iOS demonstrados
 
-Este projeto explora vários conceitos importantes para desenvolvimento iOS:
+Este projeto explora vários conceitos importantes para desenvolvimento iOS.
 
-📱 UIKit
+## 📱 UIKit
 
-UIViewController
+- `UIViewController`
+- `UITableView`
+- `NavigationController`
+- `Segues`
+- `Gesture Recognizers`
 
-UITableView
+---
 
-NavigationController
+## 🗺️ MapKit
 
-Segues entre telas
+- `MKMapView`
+- `MKAnnotation`
+- `MKMarkerAnnotationView`
+- Integração com **Apple Maps**
 
-Gesture Recognizers
+---
 
-🗺️ MapKit
+## 📍 CoreLocation
 
-MKMapView
+- Permissões de localização
+- Atualização da posição do usuário
+- Centralização do mapa baseada na localização atual
 
-MKAnnotation
+---
 
-MKMarkerAnnotationView
+## 💾 CoreData
 
-Integração com Apple Maps
+- Persistência de dados
+- `NSFetchRequest`
+- `NSPredicate`
+- Operações **CRUD**
 
-📍 CoreLocation
+---
 
-Permissões de localização
+## 🔔 Comunicação entre telas
 
-Atualização da posição do usuário
+Uso de **NotificationCenter** para atualizar a lista quando um novo local é salvo.
 
-Centralização do mapa baseada na localização atual
+---
 
-💾 CoreData
+# 📲 Fluxo da aplicação
 
-Persistência local
+1. O usuário abre o aplicativo e vê a lista de lugares salvos
+2. Pressiona o botão **"+"** para adicionar um novo local
+3. Pressiona o mapa por alguns segundos para marcar uma localização
+4. Adiciona nome e comentário
+5. Salva o local
+6. O local aparece na lista principal
+7. Ao selecionar o item, o mapa mostra a localização salva
 
-FetchRequest
+---
 
-Predicates
+# 🛠️ Tecnologias utilizadas
 
-CRUD de dados
+- Swift
+- UIKit
+- MapKit
+- CoreLocation
+- CoreData
+- Xcode
 
-🔔 Comunicação entre telas
+---
 
-Uso de NotificationCenter para atualizar a lista quando um novo local é salvo.
+# 🎯 Objetivo do projeto
 
-📲 Fluxo da aplicação
+Este projeto foi desenvolvido para **praticar conceitos fundamentais do ecossistema iOS** e demonstrar conhecimento em:
 
-1️⃣ O usuário abre o aplicativo e vê a lista de lugares salvos
-2️⃣ Pressiona o botão "+" para adicionar um novo local
-3️⃣ Pressiona o mapa por alguns segundos para marcar uma localização
-4️⃣ Adiciona nome e comentário
-5️⃣ Salva o local
-6️⃣ O local aparece na lista principal
-7️⃣ Ao selecionar o item, o mapa mostra a localização salva
+- Persistência de dados
+- Manipulação de mapas
+- Gerenciamento de localização
+- Navegação entre telas
+- Arquitetura básica de aplicativos iOS
 
-🛠️ Tecnologias utilizadas
+---
 
-Swift
+# 👨‍💻 Autor
 
-UIKit
+Desenvolvido por **Willyan Anjos**
 
-MapKit
+Software Engineer com experiência em:
 
-CoreLocation
-
-CoreData
-
-Xcode
-
-🎯 Objetivo do projeto
-
-Este projeto foi desenvolvido para praticar conceitos fundamentais do ecossistema iOS e demonstrar conhecimento em:
-
-Persistência de dados
-
-Manipulação de mapas
-
-Gerenciamento de localização
-
-Navegação entre telas
-
-Arquitetura básica de apps iOS
+- Java / Spring Boot
+- Angular
+- Flutter
+- PostgreSQL
+- iOS (Swift)
