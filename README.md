@@ -11,7 +11,7 @@ Este projeto foi criado como estudo prático para consolidar conhecimentos essen
 
 ## 📱 Preview
 
-<img src="screenshots/f11.png" width="250"/>
+<img src="screenshots/f1.png" width="250"/>
 <img src="screenshots/f2.png" width="250"/>
 <img src="screenshots/f3.png" width="250"/>
 
